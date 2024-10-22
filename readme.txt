@@ -1,3 +1,55 @@
+// InterfazPrincipal.cs (Feature 1: Coordinador e Integración)
+using ProyectoProyeccion.Servicios;
+using ProyectoProyeccion.Procesos;
+using System;
+using System.Windows.Forms;
+
+namespace ProyectoProyeccion.Interfaz
+{
+    /// <summary>
+    /// Clase encargada de coordinar la carga de datos y la ejecución del procesamiento.
+    /// Feature 1: Asignado a Persona 1 (Coordinador e Integración)
+    /// </summary>
+    public partial class InterfazPrincipal : Form
+    {
+        private ArchivoProyeccion archivoProyeccion;
+        private ProcesadorHilosSexo procesadorSexo;
+        private ProcesadorHilosEscolaridad procesadorEscolaridad;
+
+        public InterfazPrincipal()
+        {
+            InitializeComponent();
+        }
+
+        // Método para manejar el evento de carga de archivo
+        private void btnCargarArchivo_Click(object sender, EventArgs e)
+        {
+            archivoProyeccion = new ArchivoProyeccion();
+            archivoProyeccion.CargarDatos("ruta_del_archivo.txt");
+
+            // Conectar con los procesadores de hilos y pasar los datos cargados
+            procesadorSexo = new ProcesadorHilosSexo(archivoProyeccion.PersonasPorEdad);
+            procesadorEscolaridad = new ProcesadorHilosEscolaridad(archivoProyeccion.PersonasPorEdad);
+
+            MessageBox.Show("Archivo cargado y listo para procesar.");
+        }
+
+        // Método para procesar los datos
+        private void btnProcesarDatos_Click(object sender, EventArgs e)
+        {
+            procesadorSexo.IniciarProcesos();
+            procesadorEscolaridad.IniciarProcesos();
+            MessageBox.Show("Datos procesados correctamente.");
+        }
+
+        // Método para cerrar la aplicación
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+    }
+}
+
 // PersonaPorEdad.cs (Feature 2: Modelo de Datos)
 namespace ProyectoProyeccion.Modelo
 {
@@ -61,7 +113,7 @@ namespace ProyectoProyeccion.Servicios
     }
 }
 
-// ProcesadorHilos.cs (Feature 4: Procesamiento por Sexo)
+// ProcesadorHilosSexo.cs (Feature 4: Procesamiento por Sexo)
 using ProyectoProyeccion.Modelo;
 using System.Collections.Generic;
 
@@ -192,3 +244,25 @@ namespace ProyectoProyeccion.Interfaz
         }
     }
 }
+
+
+Distribución de Tareas:
+
+    Persona 1 (Coordinador e Integración): InterfazPrincipal.cs
+        Manejo de la carga de datos y la coordinación entre los distintos procesadores.
+        Supervisar e integrar todas las partes del proyecto.
+        Gestionar la interfaz principal de la aplicación.
+
+    Persona 2 (Modelo de Datos): PersonaPorEdad.cs
+        Implementar la clase que modela los datos de la población.
+
+    Persona 3 (Servicio de Datos): ArchivoProyeccion.cs
+        Implementar la lógica para leer el archivo plano y cargar los datos.
+
+    Persona 4 (Procesamiento por Sexo): ProcesadorHilosSexo.cs
+        Encargarse de procesar los datos para calcular los totales por sexo.
+
+    Persona 5 (Procesamiento por Escolaridad): ProcesadorHilosEscolaridad.cs
+        Encargarse de procesar los datos para calcular los totales por nivel de escolaridad.
+
+    **Persona
