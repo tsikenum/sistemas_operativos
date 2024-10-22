@@ -61,22 +61,22 @@ namespace ProyectoProyeccion.Servicios
     }
 }
 
-// ProcesadorHilos.cs (Feature 4 y 5: Procesamiento de Datos con Hilos)
+// ProcesadorHilos.cs (Feature 4: Procesamiento por Sexo)
 using ProyectoProyeccion.Modelo;
 using System.Collections.Generic;
 
 namespace ProyectoProyeccion.Procesos
 {
     /// <summary>
-    /// Clase encargada de procesar los datos en hilos, para calcular totales por sexo y escolaridad.
-    /// Feature 4 y 5: Asignado a Persona 4 (Procesamiento por Sexo) y Persona 5 (Procesamiento por Escolaridad)
+    /// Clase encargada de procesar los datos en hilos para calcular totales por sexo.
+    /// Feature 4: Asignado a Persona 4 (Procesamiento por Sexo)
     /// </summary>
-    public class ProcesadorHilos
+    public class ProcesadorHilosSexo
     {
         private List<PersonaPorEdad> _personasPorEdad;
 
         // Constructor
-        public ProcesadorHilos(List<PersonaPorEdad> personasPorEdad)
+        public ProcesadorHilosSexo(List<PersonaPorEdad> personasPorEdad)
         {
             // Inicializar la lista de personas
         }
@@ -88,18 +88,40 @@ namespace ProyectoProyeccion.Procesos
         }
 
         // Método para procesar los datos por sexo
-        /// <summary>
-        /// Feature 4: Asignado a Persona 4 (Procesamiento por Sexo)
-        /// </summary>
         private void ProcesarPorSexo()
         {
             // Implementar la lógica para procesar los datos por sexo
         }
+    }
+}
+
+// ProcesadorHilosEscolaridad.cs (Feature 5: Procesamiento por Escolaridad)
+using ProyectoProyeccion.Modelo;
+using System.Collections.Generic;
+
+namespace ProyectoProyeccion.Procesos
+{
+    /// <summary>
+    /// Clase encargada de procesar los datos en hilos para calcular totales por escolaridad.
+    /// Feature 5: Asignado a Persona 5 (Procesamiento por Escolaridad)
+    /// </summary>
+    public class ProcesadorHilosEscolaridad
+    {
+        private List<PersonaPorEdad> _personasPorEdad;
+
+        // Constructor
+        public ProcesadorHilosEscolaridad(List<PersonaPorEdad> personasPorEdad)
+        {
+            // Inicializar la lista de personas
+        }
+
+        // Método para iniciar los hilos
+        public void IniciarProcesos()
+        {
+            // Implementar la ejecución de hilos
+        }
 
         // Método para procesar los datos por escolaridad
-        /// <summary>
-        /// Feature 5: Asignado a Persona 5 (Procesamiento por Escolaridad)
-        /// </summary>
         private void ProcesarPorEscolaridad()
         {
             // Implementar la lógica para procesar los datos por escolaridad
@@ -107,21 +129,20 @@ namespace ProyectoProyeccion.Procesos
     }
 }
 
-// Form1.cs (Feature 6: Interfaz de Usuario)
+// InterfazCargarArchivo.cs (Feature 6: Cargar Archivo en Interfaz)
 using ProyectoProyeccion.Servicios;
-using ProyectoProyeccion.Procesos;
 using System;
 using System.Windows.Forms;
 
 namespace ProyectoProyeccion.Interfaz
 {
     /// <summary>
-    /// Clase encargada de la interfaz gráfica de usuario.
-    /// Feature 6: Asignado a Persona 6 (Interfaz de Usuario)
+    /// Clase encargada del manejo de eventos para cargar el archivo desde la interfaz.
+    /// Feature 6: Asignado a Persona 6 (Cargar Archivo en Interfaz)
     /// </summary>
-    public partial class Form1 : Form
+    public partial class InterfazCargarArchivo : Form
     {
-        public Form1()
+        public InterfazCargarArchivo()
         {
             InitializeComponent();
         }
@@ -131,9 +152,7 @@ namespace ProyectoProyeccion.Interfaz
         {
             var archivo = new ArchivoProyeccion();
             archivo.CargarDatos("ruta_del_archivo.txt");
-
-            var procesador = new ProcesadorHilos(archivo.PersonasPorEdad);
-            procesador.IniciarProcesos();
+            // Conectar con el procesador de hilos adecuado
         }
 
         // Método para cerrar la aplicación
@@ -144,47 +163,32 @@ namespace ProyectoProyeccion.Interfaz
     }
 }
 
-// PruebasProyecto.cs (Feature 7: Integración y Pruebas)
-using ProyectoProyeccion.Modelo;
-using ProyectoProyeccion.Servicios;
+// InterfazProcesarDatos.cs (Feature 7: Procesar Datos en Interfaz)
 using ProyectoProyeccion.Procesos;
 using System;
+using System.Windows.Forms;
 
-namespace ProyectoProyeccion.Pruebas
+namespace ProyectoProyeccion.Interfaz
 {
     /// <summary>
-    /// Clase encargada de realizar la integración y pruebas de todos los módulos.
-    /// Feature 7: Asignado a Persona 7 (Integración y Pruebas)
+    /// Clase encargada del manejo de eventos para procesar los datos desde la interfaz.
+    /// Feature 7: Asignado a Persona 7 (Procesar Datos en Interfaz)
     /// </summary>
-    public class PruebasProyecto
+    public partial class InterfazProcesarDatos : Form
     {
-        public void EjecutarPruebas()
+        public InterfazProcesarDatos()
         {
-            // Cargar datos, iniciar procesamiento y validar los resultados
+            InitializeComponent();
         }
 
-        // Método para probar la carga de datos
-        private void ProbarCargarDatos()
+        // Método para manejar el evento de procesamiento de datos
+        private void btnProcesarDatos_Click(object sender, EventArgs e)
         {
-            // Implementar pruebas de carga de datos
-        }
+            var procesadorSexo = new ProcesadorHilosSexo(null); // Aquí se pasará la lista de datos cargados
+            var procesadorEscolaridad = new ProcesadorHilosEscolaridad(null); // Similar
 
-        // Método para probar el procesamiento por sexo
-        private void ProbarProcesamientoSexo()
-        {
-            // Implementar pruebas del procesamiento por sexo
-        }
-
-        // Método para probar el procesamiento por escolaridad
-        private void ProbarProcesamientoEscolaridad()
-        {
-            // Implementar pruebas del procesamiento por escolaridad
-        }
-
-        // Método para probar la interfaz gráfica (si es posible automatizar)
-        private void ProbarInterfaz()
-        {
-            // Implementar pruebas de interfaz gráfica
+            procesadorSexo.IniciarProcesos();
+            procesadorEscolaridad.IniciarProcesos();
         }
     }
 }
