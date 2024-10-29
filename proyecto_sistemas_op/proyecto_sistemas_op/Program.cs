@@ -1,4 +1,5 @@
-﻿using System;
+﻿using proyecto_sistemas_op.Formularios;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +17,7 @@ namespace proyecto_sistemas_op
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new FormularioPrincipal());
         }
     }
 }
