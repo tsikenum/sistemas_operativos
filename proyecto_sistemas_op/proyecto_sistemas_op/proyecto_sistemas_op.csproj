@@ -55,7 +55,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccesoDatos\AccesoDatos.cs" />
-    <Compile Include="AccesoDatos\testAcceDatos.cs" />
     <Compile Include="Formularios\FormularioPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>

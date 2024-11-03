@@ -7,14 +7,14 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 namespace proyecto_sistemas_op
 {
-    //internal static class Program
-    //{
+    internal static class Program
+    {
         /// <summary>
         /// Punto de entrada principal para la aplicación.
         /// </summary>
-      //  [STAThread]
-        //static void Main()
-       // {
+        [STAThread]
+      static void Main()
+       {
             //Application.EnableVisualStyles();
             //Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new FormularioPrincipal());
@@ -24,6 +24,6 @@ namespace proyecto_sistemas_op
          //   AccesoDatos accDatos = new AccesoDatos();
             //accDatos.Lector_archivos(path_archivo);
             //Console.Write("hola");
-      //  }
-    //}
+       }
+    }
 }
