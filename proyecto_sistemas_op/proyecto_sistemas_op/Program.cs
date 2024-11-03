@@ -15,15 +15,12 @@ namespace proyecto_sistemas_op
         [STAThread]
       static void Main()
        {
-            //Application.EnableVisualStyles();
-            //Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new FormularioPrincipal());
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new FormularioPrincipal());
 
 
-         //   string path_archivo = "C:\\Users\\Wagner\\Documents\\Git\\sistemas_operativos\\proyecto_sistemas_op\\proyecto_sistemas_op\\Datos_externos\\Proyeccion_2025.txt";
-         //   AccesoDatos accDatos = new AccesoDatos();
-            //accDatos.Lector_archivos(path_archivo);
-            //Console.Write("hola");
+        
        }
     }
 }
