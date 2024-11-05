@@ -8,5 +8,8 @@ namespace proyecto_sistemas_op.Modelos
 {
     internal class DatosPoblacion
     {
+        int NivelEducacion {  get; set; }
+        int Cantidad { get; set; }
+        int GrupoEtario { get; set; }
     }
 }
