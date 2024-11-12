@@ -8,5 +8,6 @@ namespace proyecto_sistemas_op.Modelos
 {
     internal class DatosEscolaridad
     {
+        //comentario test
     }
 }
