@@ -1,12 +1,11 @@
 ﻿using proyecto_sistemas_op.Data;
 
-string path = "C:\\Users\\Wagner\\Documents\\Git\\sistemas_operativos\\proyecto_sistemas_op\\proyecto_sistemas_op\\Datos_externos\\Proyeccion_2025.txt";
+
 
 // See https://aka.ms/new-console-template for more information
 
 AccesoDatos data = new AccesoDatos();
-string[]informacion=data.Lector_archivos(path);
-List<Dictionary<string,string>> parser_data=data.parser_data(informacion);
+List<Dictionary<string,string>> parser_data=data.parser_data();
 foreach (var dato in parser_data)
 {
     Console.WriteLine("Edad "+dato["edad"]);
