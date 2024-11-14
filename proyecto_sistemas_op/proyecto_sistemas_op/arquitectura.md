@@ -159,9 +159,9 @@ Este proyecto implica el uso de concurrencia, manipulación de archivos y organiz
 
 | Integrante     | Clase(s) Principal(es)             | Responsabilidades                                     |
 |----------------|------------------------------------|-------------------------------------------------------|
-| Integrante 1   | `LectorArchivo`                    | Leer archivo y estructurar datos básicos              |
-| Integrante 2   | `DatosPoblacion`, `DatosEscolaridad` | Modelar datos de población y educación                |
-| Integrante 3   | `ServicioPoblacion`                | Calcular distribución por edad                        |
+| Wagner         | `LectorArchivo`                    | Leer archivo y estructurar datos básicos              |
+| Greivin        | `DatosPoblacion`, `DatosEscolaridad` | Modelar datos de población y educación                |
+| Gerald         | `ServicioPoblacion`                | Calcular distribución por edad                        |
 | Integrante 4   | `ServicioAgrupacion`               | Calcular distribución por educación                   |
 | Integrante 5   | `GestorHilos`                      | Gestión de hilos y sincronización                     |
 | Integrante 6   | `Form_principal` (UI)              | Interfaz gráfica, botones, DataGrids                  |

@@ -6,11 +6,14 @@ using System.Threading.Tasks;
 
 namespace proyecto_sistemas_op.Modelos
 {
-    internal class DatosPoblacion
+    public class DatosPoblacion
     {
         //test
-        int NivelEducacion {  get; set; }
-        int Cantidad { get; set; }
-        int GrupoEtario { get; set; }
+        public int Edad { get; set; }
+        public int CantidadHombres { get; set; }
+        public int CantidadMujeres { get; set; }
+        public int PrimariaCompleta { get; set; }
+        public int SecundariaIncompleta { get; set; }
+        public int UniversitariaCompleta { get; set; }
     }
 }
