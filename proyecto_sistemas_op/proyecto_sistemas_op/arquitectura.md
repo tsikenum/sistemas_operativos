@@ -163,6 +163,6 @@ Este proyecto implica el uso de concurrencia, manipulación de archivos y organiz
 | Greivin        | `DatosPoblacion`, `DatosEscolaridad` | Modelar datos de población y educación                |
 | Gerald         | `ServicioPoblacion`                | Calcular distribución por edad                        |
 | Integrante 4   | `ServicioAgrupacion`               | Calcular distribución por educación                   |
-| Integrante 5   | `GestorHilos`                      | Gestión de hilos y sincronización                     |
-| Integrante 6   | `Form_principal` (UI)              | Interfaz gráfica, botones, DataGrids                  |
+| Gerardo        | `GestorHilos`                      | Gestión de hilos y sincronización                     |
+| Edwin          | `Form_principal` (UI)              | Interfaz gráfica, botones, DataGrids                  |
 | Integrante 7   | `Constantes`, `AyudaValidacion`    | Definición de constantes y validación de datos        |
