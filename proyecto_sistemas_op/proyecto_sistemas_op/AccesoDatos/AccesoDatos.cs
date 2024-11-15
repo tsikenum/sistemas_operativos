@@ -1,4 +1,5 @@
-﻿using System;
+﻿using proyecto_sistemas_op.Modelos;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -106,7 +107,31 @@ namespace proyecto_sistemas_op.Data
             
         }
        
+        public List<DatosPoblacion> ParsearDatosAObjectos()
+        {
+            string[] data = Lector_archivos();
+            List<DatosPoblacion> resultado = new List<DatosPoblacion>();
 
+            foreach (var linea in data) 
+            {
+                var dato = new DatosPoblacion
+                {
+                    Edad = int.Parse(linea.Substring(0, 2)),
+                    CantidadHombres = int.Parse(linea.Substring(2, 7).Trim()),
+                    CantidadMujeres = int.Parse(linea.Substring(9, 7).Trim()),
+                    PrimariaIncompleta = int.Parse(linea.Substring(16, 6).Trim()),
+                    PrimariaCompleta = int.Parse(linea.Substring(22, 6).Trim()),
+                    SecundariaCompleta = int.Parse(linea.Substring(28, 6).Trim()),
+                    SecundariaIncompleta = int.Parse(linea.Substring(34, 6).Trim()),
+                    UniversitariaCompleta = int.Parse(linea.Substring(40, 6).Trim()),
+                    UniversitariaIncompleta = int.Parse(linea.Substring(46, 6).Trim()),
+                    SinEstudios = int.Parse(linea.Substring(52, 6).Trim())
+                };
+
+                resultado.Add(dato);
+            }
+            return resultado;
+        }
 
     }
 }
