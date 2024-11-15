@@ -8,7 +8,6 @@ namespace proyecto_sistemas_op.Modelos
 {
     public class DatosEscolaridad
     {
-
         public string NivelEducacion { get; set; }
         public int Cantidad { get; set; }
         public string GrupoEtario { get; set; }

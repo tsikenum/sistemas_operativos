@@ -13,7 +13,7 @@ namespace proyecto_sistemas_op.Modelos
         public int CantidadHombres { get; set; }
         public int CantidadMujeres { get; set; }
         public int PrimariaCompleta { get; set; }
-        public int SecundariaIncompleta { get; set; }
+        public int SecundariaIncompleta { get; set; }  //No es secundaria completa??
         public int UniversitariaCompleta { get; set; }
     }
 }
