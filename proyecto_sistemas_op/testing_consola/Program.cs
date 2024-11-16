@@ -1,12 +1,13 @@
 ﻿using proyecto_sistemas_op.Data;
+using proyecto_sistemas_op.LogicaNegocio;
+using proyecto_sistemas_op.Modelos;
 
-string path = "C:\\Users\\Wagner\\Documents\\Git\\sistemas_operativos\\proyecto_sistemas_op\\proyecto_sistemas_op\\Datos_externos\\Proyeccion_2025.txt";
+
 
 // See https://aka.ms/new-console-template for more information
 
 AccesoDatos data = new AccesoDatos();
-string[]informacion=data.Lector_archivos(path);
-List<Dictionary<string,string>> parser_data=data.parser_data(informacion);
+List<Dictionary<string,string>> parser_data=data.parser_data();
 foreach (var dato in parser_data)
 {
     Console.WriteLine("Edad "+dato["edad"]);
@@ -19,4 +20,22 @@ foreach (var dato in parser_data)
     Console.WriteLine("universitaria_completa " + dato["universitaria_completa"]);
     Console.WriteLine("universitaria_incompleta " + dato["universitaria_incompleta"]);
     Console.WriteLine("sin_estudios " + dato["sin_estudios"] + "\n");
+}
+
+//Instancia para AccesoDatos
+AccesoDatos accesoDatos = new AccesoDatos();
+
+//Instancia de ServicioPoblacion
+List<DatosPoblacion> datosPoblacions = accesoDatos.ParsearDatosAObjectos(); 
+
+//Instancia de ServicioPoblacion
+ServicioPoblacion servicio =  new ServicioPoblacion();  
+
+//Calcular la distribucion por edad
+var distribuicion = servicio.CalcularDistribucionPorEdad(datosPoblacions);  
+
+//Mostrar los resultados
+foreach (var grupo in distribuicion)
+{
+    Console.WriteLine($"Grupo Etario:{grupo.Key}, Cantidad: {grupo.Value.Cantidad}, Nivel Educativo: {grupo.Value.NivelEducacion}");
 }
