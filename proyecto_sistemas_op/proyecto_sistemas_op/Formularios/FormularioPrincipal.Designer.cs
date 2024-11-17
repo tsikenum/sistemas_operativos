@@ -43,27 +43,31 @@
             // 
             // dataGridView2
             // 
+            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(290, 43);
+            this.dataGridView2.Location = new System.Drawing.Point(416, 44);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersWidth = 62;
             this.dataGridView2.RowTemplate.Height = 28;
-            this.dataGridView2.Size = new System.Drawing.Size(444, 491);
+            this.dataGridView2.Size = new System.Drawing.Size(423, 726);
             this.dataGridView2.TabIndex = 1;
+            this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             // 
             // dataGridView3
             // 
+            this.dataGridView3.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(740, 43);
+            this.dataGridView3.Location = new System.Drawing.Point(845, 44);
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.RowHeadersWidth = 62;
             this.dataGridView3.RowTemplate.Height = 28;
-            this.dataGridView3.Size = new System.Drawing.Size(344, 491);
+            this.dataGridView3.Size = new System.Drawing.Size(454, 726);
             this.dataGridView3.TabIndex = 2;
+            this.dataGridView3.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellContentClick);
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 12);
+            this.textBox1.Location = new System.Drawing.Point(88, 12);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(218, 26);
             this.textBox1.TabIndex = 5;
@@ -71,7 +75,7 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(370, 12);
+            this.textBox2.Location = new System.Drawing.Point(499, 12);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(270, 26);
             this.textBox2.TabIndex = 6;
@@ -79,17 +83,17 @@
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(817, 12);
+            this.textBox3.Location = new System.Drawing.Point(995, 12);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(201, 26);
+            this.textBox3.Size = new System.Drawing.Size(207, 26);
             this.textBox3.TabIndex = 7;
             this.textBox3.Text = "Listado Segun Escolaridad";
             // 
             // btnCargarArchivo
             // 
-            this.btnCargarArchivo.Location = new System.Drawing.Point(834, 542);
+            this.btnCargarArchivo.Location = new System.Drawing.Point(922, 776);
             this.btnCargarArchivo.Name = "btnCargarArchivo";
-            this.btnCargarArchivo.Size = new System.Drawing.Size(123, 42);
+            this.btnCargarArchivo.Size = new System.Drawing.Size(211, 42);
             this.btnCargarArchivo.TabIndex = 8;
             this.btnCargarArchivo.Text = "Cargar Archivo";
             this.btnCargarArchivo.UseVisualStyleBackColor = true;
@@ -97,7 +101,7 @@
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(975, 542);
+            this.btnSalir.Location = new System.Drawing.Point(1170, 776);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(103, 42);
             this.btnSalir.TabIndex = 9;
@@ -107,19 +111,21 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(12, 44);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(272, 491);
+            this.dataGridView1.Size = new System.Drawing.Size(398, 726);
             this.dataGridView1.TabIndex = 10;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // FormularioPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1090, 594);
+            this.ClientSize = new System.Drawing.Size(1303, 830);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnCargarArchivo);

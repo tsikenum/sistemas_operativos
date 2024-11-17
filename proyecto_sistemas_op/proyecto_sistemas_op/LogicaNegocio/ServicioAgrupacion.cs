@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace proyecto_sistemas_op.LogicaNegocio
 {
-    internal class ServicioAgrupacion
+    public class ServicioAgrupacion
     {
         public Dictionary<string, DatosEscolaridad> CalcularDistribucionPorEducacion(List<DatosPoblacion> datos)
         {
