@@ -43,9 +43,10 @@
             // 
             // dataGridView2
             // 
+            this.dataGridView2.AccessibleName = "dt_lista_edades_sexo_GrupoEtario";
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Location = new System.Drawing.Point(406, 32);
-            this.dataGridView2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView2.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersWidth = 62;
             this.dataGridView2.RowTemplate.Height = 28;
@@ -54,9 +55,10 @@
             // 
             // dataGridView3
             // 
+            this.dataGridView3.AccessibleName = "dt_lista_Segun_Escolaridad";
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView3.Location = new System.Drawing.Point(768, 28);
-            this.dataGridView3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView3.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.RowHeadersWidth = 62;
             this.dataGridView3.RowTemplate.Height = 28;
@@ -66,7 +68,7 @@
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(121, 5);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(147, 20);
             this.textBox1.TabIndex = 5;
@@ -75,7 +77,7 @@
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(493, 8);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(181, 20);
             this.textBox2.TabIndex = 6;
@@ -84,7 +86,7 @@
             // textBox3
             // 
             this.textBox3.Location = new System.Drawing.Point(828, 4);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(2);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(135, 20);
             this.textBox3.TabIndex = 7;
@@ -93,7 +95,7 @@
             // btnCargarArchivo
             // 
             this.btnCargarArchivo.Location = new System.Drawing.Point(828, 388);
-            this.btnCargarArchivo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCargarArchivo.Margin = new System.Windows.Forms.Padding(2);
             this.btnCargarArchivo.Name = "btnCargarArchivo";
             this.btnCargarArchivo.Size = new System.Drawing.Size(82, 27);
             this.btnCargarArchivo.TabIndex = 8;
@@ -104,7 +106,7 @@
             // btnSalir
             // 
             this.btnSalir.Location = new System.Drawing.Point(936, 388);
-            this.btnSalir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(2);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(69, 27);
             this.btnSalir.TabIndex = 9;
@@ -117,7 +119,7 @@
             this.dt_lista_edades_sexo.AccessibleName = "dt_lista_edades_sexo";
             this.dt_lista_edades_sexo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dt_lista_edades_sexo.Location = new System.Drawing.Point(8, 29);
-            this.dt_lista_edades_sexo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dt_lista_edades_sexo.Margin = new System.Windows.Forms.Padding(2);
             this.dt_lista_edades_sexo.Name = "dt_lista_edades_sexo";
             this.dt_lista_edades_sexo.RowHeadersWidth = 62;
             this.dt_lista_edades_sexo.RowTemplate.Height = 28;
@@ -137,7 +139,7 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.dataGridView3);
             this.Controls.Add(this.dataGridView2);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormularioPrincipal";
             this.Text = "Procesando Hilo:";
             this.Load += new System.EventHandler(this.FormularioPrincipal_Load);
