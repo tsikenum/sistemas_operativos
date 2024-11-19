@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -36,9 +37,13 @@
             this.btnCargarArchivo = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.dt_lista_edades_sexo = new System.Windows.Forms.DataGridView();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.lblProgreso = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dt_lista_edades_sexo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView2
@@ -126,11 +131,34 @@
             this.dt_lista_edades_sexo.Size = new System.Drawing.Size(384, 319);
             this.dt_lista_edades_sexo.TabIndex = 10;
             // 
+            // progressBar1
+            // 
+            this.progressBar1.Location = new System.Drawing.Point(493, 183);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(175, 33);
+            this.progressBar1.TabIndex = 11;
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // lblProgreso
+            // 
+            this.lblProgreso.AutoSize = true;
+            this.lblProgreso.Location = new System.Drawing.Point(501, 191);
+            this.lblProgreso.Name = "lblProgreso";
+            this.lblProgreso.Size = new System.Drawing.Size(35, 13);
+            this.lblProgreso.TabIndex = 12;
+            this.lblProgreso.Text = "label1";
+            this.lblProgreso.Click += new System.EventHandler(this.label1_Click);
+            // 
             // FormularioPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1057, 496);
+            this.Controls.Add(this.lblProgreso);
+            this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.dt_lista_edades_sexo);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnCargarArchivo);
@@ -146,6 +174,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dt_lista_edades_sexo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -160,5 +189,8 @@
         private System.Windows.Forms.Button btnCargarArchivo;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.DataGridView dt_lista_edades_sexo;
+        private System.Windows.Forms.ProgressBar progressBar1;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.Label lblProgreso;
     }
 }
